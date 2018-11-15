@@ -64,6 +64,19 @@ public class GUI_GameOver extends JFrame {
 			}
 		});
 		
+		JButton btnReiniciar = new JButton("Reiniciar");
+		btnReiniciar.setForeground(Color.WHITE);
+		btnReiniciar.setBackground(Color.BLACK);
+		btnReiniciar.setFont(new Font("Unispace", Font.PLAIN, 17));
+		btnReiniciar.setBounds(620, 11, 150, 50);
+		contentPane.add(btnReiniciar);
+		btnReiniciar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				restartGame();
+			}
+		});
+		
+		
 		background = new JLabel();
 		background.setIcon(icon);
 		background.setBounds(0, 0, 1024, 700);
@@ -72,6 +85,19 @@ public class GUI_GameOver extends JFrame {
 	}
 	
 	private void exitFromGame() {
-		this.dispose();
+		System.exit(0);
 	}
+	
+	private void restartGame() {
+		Thread t = new Thread() {
+	        public void run() {
+	        	dispose();
+	        	GUI_HomeScreen frame = GUI_HomeScreen.getInstance();
+	    		frame.setVisible(true);
+	        }
+	    };
+	    t.start();
+
+	}
+	
 }
