@@ -1,0 +1,21 @@
+Nombre: Pepe
+Email pepe@gmail.com
+
+Mensaje: Buenas tardes,
+me gusto el juego 
+
+Saludos,
+Pepe
+
+----------------------Linea separadora tercermundista------------------------
+
+Nombre: juan
+Email juan@gmail.com
+
+Mensaje: El juego me parecio muy malo
+
+Saludos
+Juan
+
+----------------------Linea separadora tercermundista------------------------
+
