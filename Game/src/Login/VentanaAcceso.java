@@ -144,6 +144,8 @@ public class VentanaAcceso extends JFrame {
 		}
 		return u;
 	}
+	
+
 
 	public void iniciarGui() {
 

@@ -100,6 +100,26 @@ public class GUI_HomeScreen extends JFrame {
 		btnComentarios.setBackground(Color.BLACK);
 		btnComentarios.setBorder(new LineBorder(Color.lightGray.darker(), 2));
 		btnComentarios.setForeground(Color.white);
+
+		// Boton cerrar sesion
+
+		JButton btnCerrarSesion = new JButton("Cerrar sesion");
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				cerrarSesion();
+			}
+		});
+		contentPane.setLayer(btnCerrarSesion, 2);
+		btnCerrarSesion.setBounds(42, 344, 150, 40);
+		contentPane.add(btnCerrarSesion);
+		btnCerrarSesion.setFont(new Font("Unispace", Font.PLAIN, 16));
+		btnCerrarSesion.setBackground(Color.BLACK);
+		btnCerrarSesion.setBorder(new LineBorder(Color.lightGray.darker(), 2));
+		btnCerrarSesion.setForeground(Color.white);
+	}
+	
+	private void cerrarSesion() {
+		dispose();
 	}
 
 	private void startGame() {
@@ -145,25 +165,25 @@ public class GUI_HomeScreen extends JFrame {
 		this.btnHelp.setEnabled(true);
 		this.btnStart.setEnabled(true);
 	}
-	
+
 	public void agregarBotonVerComentarios() {
 		// Boton Ver Comentarios
 		JButton btnVerComentarios = new JButton("Ver comentarios");
-		btnVerComentarios .addActionListener(new ActionListener() {
+		btnVerComentarios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				startVerComentarios();
 			}
 		});
-		contentPane.setLayer(btnVerComentarios , 2);
-		btnVerComentarios .setBounds(42, 254, 190, 40);
-		contentPane.add(btnVerComentarios );
-		btnVerComentarios .setFont(new Font("Unispace", Font.PLAIN, 16));
-		btnVerComentarios .setBackground(Color.BLACK);
-		btnVerComentarios .setBorder(new LineBorder(Color.lightGray.darker(), 2));
-		btnVerComentarios .setForeground(Color.white);
-		
+		contentPane.setLayer(btnVerComentarios, 2);
+		btnVerComentarios.setBounds(42, 254, 190, 40);
+		contentPane.add(btnVerComentarios);
+		btnVerComentarios.setFont(new Font("Unispace", Font.PLAIN, 16));
+		btnVerComentarios.setBackground(Color.BLACK);
+		btnVerComentarios.setBorder(new LineBorder(Color.lightGray.darker(), 2));
+		btnVerComentarios.setForeground(Color.white);
+
 	}
-	
+
 	private void startVerComentarios() {
 		GUI_VerComentarios verComentarios = new GUI_VerComentarios(this);
 		disableAllComponents();
